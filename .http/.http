@@ -1,0 +1,27 @@
+### /
+GET {{host}}/
+
+### slack get
+GET {{host}}/slack/v1/send?message=[.http]%20get&test=true
+
+### slack post
+POST {{host}}/slack/v1/send
+Content-Type: application/json
+
+{
+  "message": "[.http] post",
+  "test": true
+}
+
+### slack image
+POST {{host}}/slack/v1/send
+Content-Type: application/json
+
+{
+  "image": "https://t1.daumcdn.net/cfile/tistory/27738433597DCB1312",
+  "message": "[.http] image",
+  "test": true
+}
+
+### email get
+GET {{host}}/email/v1/send?to=seunggabi%40seunggabi.com&cc=seunggabi%40seunggabi.com&bcc=seunggabi%40seunggabi.com&subject=%5BTEST%5D%20mail&text=test
